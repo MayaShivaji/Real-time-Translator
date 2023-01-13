@@ -3,3 +3,4 @@ pyaudio
 gtts
 pydub
 ffmpeg-python
+googletrans==4.0.0rc1
