@@ -18,7 +18,7 @@ def tts(text, lang):
     TextAudio = gTTS(text=text, lang=lang)
 
     #   filepath to save the audio file in the desired directory
-    filePath = './tmp/audio.mp3'
+    filePath = './audio.mp3'
     TextAudio.save(filePath)
 
     #   playback of the audio and removal on exit
