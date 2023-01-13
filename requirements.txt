@@ -1,0 +1,5 @@
+SpeechRecognition
+pyaudio
+gtts
+pydub
+ffmpeg-python
