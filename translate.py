@@ -8,24 +8,29 @@ from googletrans import Translator
 
 
 
-def translate(text, lang):
+def translate(text, lang, src=None):
     #   an instance of Translator object
     # translator = Translator(service_urls=['translate.google.com', 'translate.google.co.in'])
     translator = Translator()
     #   Translate text from source language to destination language
-    trans = translator.translate(text=text, dest=lang)
+    if src:
+        trans = translator.translate(text=text, dest=lang, src=src)
+    else:
+        trans = translator.translate(text=text, dest=lang)
     #   to check if the user is passing a list of strings
     if isinstance(trans, list):
         for translations in trans:
-            if translations.pronunciation == None:
-                print(translations.text, '\n')
-            else:
-                print(translations.text, '->', translations.pronunciation, '\n')
+            # if translations.pronunciation == None:
+            #     return translations.text
+            # else:
+            #     return (translations.text, '->', translations.pronunciation, '\n')
+            return translations.text
     else:
-        if trans.pronunciation == None:
-            print(trans.text, '\n')
-        else:
-            print(trans.text, '->', trans.pronunciation, '\n')
+        # if trans.pronunciation == None:
+        #     return (trans.text, '\n')
+        # else:
+        #     return (trans.text, '->', trans.pronunciation, '\n')
+        return trans.text
 
 if __name__ == "__main__":
     #   My favourite quote by El profesor from Money Heist
