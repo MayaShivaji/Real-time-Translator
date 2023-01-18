@@ -6,7 +6,7 @@ import speech_recognition as sr
 
 global_source_language = 'ja'
 global_target_language = 'en'
-name = 'Utrans'
+name = 'Tori'
 
 # when the name hey utrans is called, it stops translating and instead follows a number of commands
     #change_tlang [completed] (target language) **can use string to find specific word so it triggers without specific command
@@ -74,7 +74,7 @@ def audio_processor():
         except:
             said = None
 
-        if said and "bob" in said.lower():
+        if said and "Tori" in said.lower():
             # Process commands:
             #
             # 1. Set language to <language> ->
